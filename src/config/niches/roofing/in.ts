@@ -308,7 +308,7 @@ export const roofingIn: RegionDetails = {
     "Service registration and insurance details on this site are placeholders. Verify credentials directly before hiring any contractor. This is a fictional demo business.",
   demo: {
     banner:
-      "Demo site · Fictional Jaipur business · No real bookings or dispatches",
+      "Fictional demo · No real bookings or dispatches",
     disclaimer:
       "SafeTop Roofing & Waterproofing is a fictional demo business. Names, team profiles, reviews, prices, registrations and service claims are sample content. The form is connected to a demonstration automation, not a real roofing office.",
     formNote:

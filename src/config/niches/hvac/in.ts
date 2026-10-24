@@ -308,7 +308,7 @@ export const hvacIn: RegionDetails = {
     "Service registration and insurance details on this site are placeholders. Verify credentials directly before hiring any technician. This is a fictional demo business.",
   demo: {
     banner:
-      "Demo site · Fictional Indore business · No real bookings or dispatches",
+      "Fictional demo · No real bookings or dispatches",
     disclaimer:
       "CoolNest AC Care is a fictional demo business. Names, team profiles, reviews, prices, registrations and service claims are sample content. The form is connected to a demonstration automation, not a real dispatch team.",
     formNote:

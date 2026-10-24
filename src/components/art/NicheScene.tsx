@@ -7,6 +7,12 @@ interface NicheSceneProps {
   state?: SceneState;
   className?: string;
   title?: string;
+  /** Hide the diagram from assistive tech when it is used as decoration. */
+  decorative?: boolean;
+  /** Hide the state label when a parent already shows before/after badges. */
+  showStateLabel?: boolean;
+  /** Hide the top system label when a parent overlays its own badges. */
+  showHeader?: boolean;
 }
 
 const COPY: Record<NicheId, { before: string; after: string }> = {
@@ -320,6 +326,9 @@ export function NicheScene({
   state = "hero",
   className,
   title,
+  decorative = false,
+  showStateLabel = true,
+  showHeader = true,
 }: NicheSceneProps) {
   const Scene = SCENES[niche];
   const copy = COPY[niche];
@@ -331,11 +340,15 @@ export function NicheScene({
     <svg
       viewBox="0 0 640 480"
       className={className}
-      role="img"
+      role={decorative ? "presentation" : "img"}
       aria-label={
-        title ??
-        `${niche} system diagram, ${state === "before" ? "before" : "after"} view`
+        decorative
+          ? undefined
+          : (title ??
+            `${niche} system diagram, ${state === "before" ? "before" : "after"} view`)
       }
+      aria-hidden={decorative ? true : undefined}
+      focusable="false"
     >
       <title>{title ?? `${niche} system diagram — ${label.toLowerCase()}`}</title>
       <rect width="640" height="480" rx="28" fill="var(--surface)" />
@@ -349,29 +362,33 @@ export function NicheScene({
         opacity="0.55"
       />
       <Grid />
-      <text
-        x="40"
-        y="52"
-        fontFamily="var(--font-body)"
-        fontSize="10"
-        fontWeight="700"
-        letterSpacing="2"
-        fill="var(--muted)"
-      >
-        SYSTEM VIEW · {niche.toUpperCase()}
-      </text>
-      <text
-        x="600"
-        y="52"
-        textAnchor="end"
-        fontFamily="var(--font-body)"
-        fontSize="10"
-        fontWeight="700"
-        letterSpacing="2"
-        fill={resolvedState === "before" ? "#C24122" : "var(--brand)"}
-      >
-        {label}
-      </text>
+      {showHeader ? (
+        <text
+          x="40"
+          y="52"
+          fontFamily="var(--font-body)"
+          fontSize="10"
+          fontWeight="700"
+          letterSpacing="2"
+          fill="var(--muted)"
+        >
+          SYSTEM VIEW · {niche.toUpperCase()}
+        </text>
+      ) : null}
+      {showStateLabel ? (
+        <text
+          x="600"
+          y="52"
+          textAnchor="end"
+          fontFamily="var(--font-body)"
+          fontSize="10"
+          fontWeight="700"
+          letterSpacing="2"
+          fill={resolvedState === "before" ? "#C24122" : "var(--brand)"}
+        >
+          {label}
+        </text>
+      ) : null}
       <Scene state={resolvedState} />
       <line x1="40" y1="404" x2="600" y2="404" stroke="var(--border)" strokeWidth="1" />
       <text

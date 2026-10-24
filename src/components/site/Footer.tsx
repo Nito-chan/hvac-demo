@@ -23,7 +23,6 @@ export function Footer({
             <Link
               href={withRegion("/", region)}
               className="inline-flex items-center gap-3"
-              aria-label={`${config.business.name} home`}
             >
               <BrandMark niche={config.niche} className="h-11 w-11 text-brand" />
               <span>
@@ -78,7 +77,7 @@ export function Footer({
           </div>
 
           <div>
-            <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-surface/40">
+            <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-surface">
               Services
             </h2>
             <ul className="mt-4 space-y-2.5 text-sm">
@@ -105,7 +104,7 @@ export function Footer({
           </div>
 
           <div>
-            <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-surface/40">
+            <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-surface">
               Service area
             </h2>
             <ul className="mt-4 space-y-2.5 text-sm">
@@ -132,7 +131,7 @@ export function Footer({
           </div>
 
           <div>
-            <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-surface/40">
+            <h2 className="text-[10px] font-bold uppercase tracking-[0.2em] text-surface">
               Company
             </h2>
             <ul className="mt-4 space-y-2.5 text-sm">
@@ -166,7 +165,7 @@ export function Footer({
               <p className="text-xs leading-relaxed text-surface/60">
                 {config.demo.disclaimer}
               </p>
-              <p className="mt-2 text-xs leading-relaxed text-surface/45">
+              <p className="mt-2 text-xs leading-relaxed text-surface">
                 {config.legalNote} Reviews are sample content and are not
                 presented as verified customer feedback.
               </p>
@@ -174,7 +173,7 @@ export function Footer({
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col gap-4 border-t border-white/10 pt-6 text-[11px] text-surface/40 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-8 flex flex-col gap-4 border-t border-white/10 pt-6 text-[11px] text-surface sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {config.business.name}. Fictional demo. No real bookings.
           </p>

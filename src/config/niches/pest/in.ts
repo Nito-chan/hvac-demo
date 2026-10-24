@@ -308,7 +308,7 @@ export const pestIn: RegionDetails = {
     "Service registration and insurance details on this site are placeholders. Verify credentials directly before hiring any pest-control provider. This is a fictional demo business.",
   demo: {
     banner:
-      "Demo site · Fictional Lucknow business · No real bookings or dispatches",
+      "Fictional demo · No real bookings or dispatches",
     disclaimer:
       "SafeHome Pest Solutions is a fictional demo business. Names, team profiles, reviews, prices, registrations and service claims are sample content. The form is connected to a demonstration automation, not a real pest-control office.",
     formNote:

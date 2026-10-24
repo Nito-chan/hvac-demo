@@ -79,7 +79,7 @@ export function SectionHeading({
             className={cn(
               "mb-3 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.22em]",
               align === "center" && "justify-center",
-              inverse ? "text-accent" : "text-brand",
+              inverse ? "text-accent" : "text-brand-strong",
             )}
           >
             <span

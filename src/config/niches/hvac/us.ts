@@ -307,7 +307,7 @@ export const hvacUs: RegionDetails = {
     "Licence and insurance details on this site are placeholders. Verify credentials directly before hiring any contractor. This is a fictional demo business.",
   demo: {
     banner:
-      "Demo site · Fictional Kansas City business · No real bookings or dispatches",
+      "Fictional demo · No real bookings or dispatches",
     disclaimer:
       "NorthPeak Heating & Air is a fictional demo business. Names, team profiles, reviews, prices, licence details and service claims are sample content. The form is connected to a demonstration automation, not a real dispatch team.",
     formNote:

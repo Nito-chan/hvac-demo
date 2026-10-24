@@ -1,22 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Icon } from "@/components/ui/Icon";
 
 const STORAGE_KEY = "hs-demo-banner-dismissed-v1";
 
 export function DemoBanner({ message }: { message: string }) {
-  const [visible, setVisible] = useState(true);
-
-  useEffect(() => {
+  const [visible, setVisible] = useState(() => {
     try {
-      if (window.localStorage.getItem(STORAGE_KEY) === "1") {
-        setVisible(false);
-      }
+      return window.localStorage.getItem(STORAGE_KEY) !== "1";
     } catch {
-      // Storage can be unavailable in private modes. Keep the notice visible.
+      return true;
     }
-  }, []);
+  });
 
   if (!visible) {
     return null;

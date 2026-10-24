@@ -1,7 +1,12 @@
+import path from "node:path";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
+  turbopack: {
+    root: path.resolve(__dirname),
+  },
+  devIndicators: false,
   images: {
     formats: ["image/avif", "image/webp"],
     deviceSizes: [640, 768, 1024, 1280, 1536],
@@ -24,6 +29,7 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  allowedDevOrigins: ["127.0.0.1", "localhost"],
 };
 
 export default nextConfig;

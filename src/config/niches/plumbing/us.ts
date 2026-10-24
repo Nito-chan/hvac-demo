@@ -307,7 +307,7 @@ export const plumbingUs: RegionDetails = {
     "Licence and insurance details on this site are placeholders. Verify credentials directly before hiring any plumber. This is a fictional demo business.",
   demo: {
     banner:
-      "Demo site · Fictional Omaha business · No real bookings or dispatches",
+      "Fictional demo · No real bookings or dispatches",
     disclaimer:
       "BlueLine Plumbing & Drain is a fictional demo business. Names, team profiles, reviews, prices, licence details and service claims are sample content. The form is connected to a demonstration automation, not a real dispatch team.",
     formNote:

@@ -307,7 +307,7 @@ export const electricianUs: RegionDetails = {
     "Licence and insurance details on this site are placeholders. Verify credentials directly before hiring any electrician. This is a fictional demo business.",
   demo: {
     banner:
-      "Demo site · Fictional Des Moines business · No real bookings or dispatches",
+      "Fictional demo · No real bookings or dispatches",
     disclaimer:
       "BrightWire Electric is a fictional demo business. Names, team profiles, reviews, prices, licence details and service claims are sample content. The form is connected to a demonstration automation, not a real electrical office.",
     formNote:

@@ -307,7 +307,7 @@ export const pestUs: RegionDetails = {
     "Licence and insurance details on this site are placeholders. Verify credentials directly before hiring any pest-control provider. This is a fictional demo business.",
   demo: {
     banner:
-      "Demo site · Fictional Wichita business · No real bookings or dispatches",
+      "Fictional demo · No real bookings or dispatches",
     disclaimer:
       "ClearNest Pest Control is a fictional demo business. Names, team profiles, reviews, prices, licence details and service claims are sample content. The form is connected to a demonstration automation, not a real pest-control office.",
     formNote:

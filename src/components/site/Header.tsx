@@ -47,7 +47,7 @@ export function Header({
           region={region}
           businessName={config.business.name}
           nicheLabel={config.nicheLabel}
-          className="max-w-[13rem] sm:max-w-[17rem]"
+          className="max-w-[15rem] sm:max-w-[17rem]"
         />
 
         <nav
@@ -75,11 +75,9 @@ export function Header({
         </nav>
 
         <div className="ml-auto flex shrink-0 items-center gap-2">
-          <RegionSwitcher
-            region={region}
-            activePath={activePath}
-            className="hidden sm:inline-flex"
-          />
+          <div className="hidden sm:flex">
+            <RegionSwitcher region={region} activePath={activePath} />
+          </div>
           <a
             href={config.contact.phoneHref}
             className="hidden h-10 items-center gap-2 rounded-full border border-line px-3 text-xs font-bold text-ink transition hover:bg-surface-2 md:inline-flex"

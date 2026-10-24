@@ -83,7 +83,6 @@ export function Logo({
     <Link
       href={withRegion("/", region)}
       className={cn("group inline-flex items-center gap-3", className)}
-      aria-label={`${businessName} home`}
     >
       <BrandMark
         niche={niche}

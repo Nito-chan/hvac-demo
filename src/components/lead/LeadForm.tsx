@@ -19,6 +19,7 @@ interface LeadFormProps {
   region: LeadFormValues["region"];
   services: string[];
   defaultService?: string;
+  defaultLocation?: string;
   formType: LeadFormValues["formType"];
   phoneDisplay: string;
   phoneHref: string;
@@ -52,6 +53,7 @@ export function LeadForm({
   region,
   services,
   defaultService,
+  defaultLocation,
   formType,
   phoneDisplay,
   phoneHref,
@@ -79,7 +81,7 @@ export function LeadForm({
       name: "",
       phone: "",
       email: "",
-      location: "",
+      location: defaultLocation ?? "",
       service: defaultService ?? "",
       message: "",
       preferredTime: "flexible",
